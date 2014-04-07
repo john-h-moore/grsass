@@ -126,30 +126,13 @@ body{
 	margin: 0 auto;
 	padding: 0 1em 0 1em;
 	max-width: 35.22em;
-	/*
-	@media screen and(max-width: $tablet-portrait){;
-		width: 95%;
-		padding: 0 0.5em 0 0.5em;
-	}
-	@media screen and(max-width: $normal) and (min-width: $tablet-landscape){
-		width: 32em;
-	}
-	@media screen and(min-width: $wide){
-		width: 35em;
-	}
-	*/
 	@include breakpoint(very-small){
-//		width: 95%;
-		//padding: 0 0.5em 0 0.5em;
 		background: blue;
 	}
 	@include breakpoint(small){
-//		width: 95%;
-		//padding: 0 0.5em 0 0.5em;
 		background: red;
 	}
 	@include breakpoint(narrow){
-//		width: 80%;
 		background: orange;
 	}
 	@include breakpoint(gs){
