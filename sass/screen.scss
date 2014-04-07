@@ -115,7 +115,7 @@ body{
 		@include breakpoint($breakpoint-medium-not-wide){ font-size: 100%; }
 		@include breakpoint($breakpoint-medium-height){ font-size: 105%; }
 		@include breakpoint($breakpoint-not-too-wide){ font-size: 110%; }
-		@include breakpiont($breakpoint-kind-of-wide){ font-size: 115%; }
+		@include breakpoint($breakpoint-kind-of-wide){ font-size: 115%; }
 	}
 }
 
