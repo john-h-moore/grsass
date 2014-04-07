@@ -72,9 +72,11 @@ body{
 		font-style: normal;
 		letter-spacing: -0.04em;
 		line-height: 1.1em;
-		padding-top: 0.25em;
-		@include breakpoint($breakpoint-not-too-wide){ padding-top: 2em; }
-		@include breakpoint($breakpoint-kind-of-wide){ padding-top: 2em; }
+		@include breakpoint($breakpoint-medium-width) { padding-top: 0.25em; }
+		@include breakpoint($breakpoint-medium-not-wide) { padding-top: 0.25em; }
+		@include breakpoint($breakpoint-medium-height) { padding-top: 0.75em; }}
+		@include breakpoint($breakpoint-not-too-wide) { padding-top: 2em; }
+		@include breakpoint($breakpoint-kind-of-wide) { padding-top: 2em; }
 	}
 }
 
@@ -91,8 +93,8 @@ body{
 	@include breakpoint(gs){ margin: 12em auto 0 auto; }
 	@include breakpoint(normal){ margin: 17em auto 0 auto; }
 	*/
-	@include breakpoint($breakpoint-medium-width){ margin: 5em auto 0 auto; }
-	@include breakpoint($breakpoint-medium-not-wide){ margin: 5em auto 0 auto; }
+	@include breakpoint($breakpoint-medium-width) { margin: 5em auto 0 auto; }
+	@include breakpoint($breakpoint-medium-not-wide) { margin: 5em auto 0 auto; }
 	@include breakpoint($breakpoint-medium-height) { margin: 7em auto 0 auto; }
 	@include breakpoint($breakpoint-not-too-wide) {	margin: 15em auto 0 auto; }
 	@include breakpoint($breakpoint-kind-of-wide) {	margin: 20em auto 0 auto; }
