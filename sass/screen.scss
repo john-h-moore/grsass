@@ -6,10 +6,47 @@
 @import "compass/reset";
 
 $font-stack: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+/*
 $tablet-portrait: 500px;
 $tablet-landscape: 768px;
 $normal: 960px;
 $wide: 1400px;
+*/
+
+/* Breakpoints */
+/*
+$very-small: 320px;
+$small: 480px;
+$narrow: 768px;
+$gs: 960px;
+$normal: 1024px;
+$wide: 1224px;
+$huge: 1824px;
+*/
+
+@mixin breakpoint($point){
+	@if $point == very-small {
+		@media screen and (max-width: 320px){ @content; }
+	}
+	@else if $point == small {
+		@media screen and (max-width: 480px) and (min-width: 321px){ @content; }
+	}
+	@else if $point == narrow {
+		@media screen and (max-width: 768px) and (min-width: 481px) { @content;}
+	}
+	@else if $point == gs {
+		@media screen and (max-width: 960px) and (min-width: 769px) { @content; }
+	}
+	@else if $point == normal {
+		@media screen and (max-width: 1024px) and (min-width: 769px) { @content; }
+	}
+	@else if $point == big {
+		@media screen and (max-width: 1224px) and (min-width: 1025px) { @content; }
+	}
+	@else if $point == wide {
+		@media screen and (max-width: 1600px){ @content; }
+	}
+}
 
 html{
 	height: 80%;
@@ -21,6 +58,7 @@ body{
 	font-family: $font-stack;
 	line-height: 1.5em;
 	font-size: 20px;
+	/*
 	@media screen and(max-width: $tablet-portrait){
 		font-size: 16px;
 	}
@@ -30,6 +68,9 @@ body{
 	@media screen and(min-width: $wide){
 		font-size: 22px;
 	}
+	*/
+	@include breakpoint(wide){ font-size: 22px; }
+	@include breakpoint(very-small){ font-size: 16px; }
 	p{
 		padding-bottom: 1em;
 	}
@@ -70,9 +111,13 @@ body{
 	background: white;
 	margin: 25em auto 0 auto;
 	padding-top: 2em;
+	/*
 	@media screen and(max-width: $tablet-portrait){
 		margin: 7em auto 0 auto;
 	}
+	*/
+	@include breakpoint(small){ margin: 7em auto 0 auto; }
+	@include breakpoint(very-small){ margin: 7em auto 0 auto; }
 	box-shadow: 0 0 25px 1px #000;
 }
 
@@ -81,6 +126,7 @@ body{
 	margin: 0 auto;
 	padding: 0 1em 0 1em;
 	width: 30em;
+	/*
 	@media screen and(max-width: $tablet-portrait){;
 		width: 95%;
 		padding: 0 0.5em 0 0.5em;
@@ -90,6 +136,15 @@ body{
 	}
 	@media screen and(min-width: $wide){
 		width: 35em;
+	}
+	*/
+	@include breakpoint(very-small){
+		width: 95%;
+		padding: 0 0.5em 0 0.5em;
+	}
+	@include breakpoint(small){
+		width: 95%;
+		padding: 0 0.5em 0 0.5em;
 	}
 	p{
 		text-align: justify;
