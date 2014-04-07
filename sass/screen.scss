@@ -26,52 +26,14 @@ $wide: 1224px;
 $huge: 1824px;
 */
 
-@mixin breakpoint($point){
-	/*
-	@if $point == very-small {
-		@media screen and (max-width: 320px){ @content; }
-	}
-	@else if $point == small {
-		@media screen and (max-width: 480px) and (min-width: 321px){ @content; }
-	}
-	@else if $point == narrow {
-		@media screen and (max-width: 768px) and (min-width: 481px) { @content;}
-	}
-	@else if $point == gs {
-		@media screen and (max-width: 960px) and (min-width: 769px) { @content; }
-	}
-	@else if $point == normal {
-		@media screen and (max-width: 1024px) and (min-width: 769px) { @content; }
-	}
-	@else if $point == big {
-		@media screen and (max-width: 1224px) and (min-width: 1025px) { @content; }
-	}
-	@else if $point == wide {
-		@media screen and (max-width: 1600px){ @content; }
-	}
-	*/
-	@if $point == very-small {
-		@media (max-width: 320px){ @content; }
-	}
-	@else if $point == small {
-		@media (max-width: 480px) { @content; }
-	}
-	@else if $point == narrow {
-		@media (max-width: 768px) { @content;}
-	}
-	@else if $point == gs {
-		@media (max-width: 960px) { @content; }
-	}
-	@else if $point == normal {
-		@media (max-width: 1024px) { @content; }
-	}
-	@else if $point == big {
-		@media (max-width: 1224px) { @content; }
-	}
-	@else if $point == wide {
-		@media screen and (max-width: 1600px){ @content; }
-	}
-}
+$breakpoint-medium-width: 500px;
+$breakpoint-medium-width-em: 30em;
+$breakpoint-medium-not-wide: 500px 700px;
+$breakpoint-medium-height: height 300px 700px;
+$breakpoint-kind-of-wide: min-width 700px;
+$breakpoint-not-too-wide: max-width 700px;
+$breakpoint-wide-portrait: (max-width 700px) (orientation portrait);
+$breakpoint-hi-rez: min-resolution 1.5dppx;
 
 html{
 	height: 80%;
@@ -82,23 +44,6 @@ body{
 	height: 80%;
 	font-family: $font-stack;
 	line-height: 1.5em;
-	font-size: 20px;
-	/*
-	@media screen and(max-width: $tablet-portrait){
-		font-size: 16px;
-	}
-	@media screen and(max-width: $normal) and (min-width: $tablet-landscape){
-		font-size: 18px;
-	}
-	@media screen and(min-width: $wide){
-		font-size: 22px;
-	}
-	*/
-	@include breakpoint(wide){ font-size: 22px; }
-	@include breakpoint(very-small){ font-size: 16px; }
-	p{
-		padding-bottom: 1em;
-	}
 }
 
 .bg{
@@ -136,11 +81,23 @@ body{
 	background: white;
 	margin: 20em auto 0 auto;
 	padding-top: 2em;
+	/*
 	@include breakpoint(very-small){ margin: 7em auto 0 auto; }
 	@include breakpoint(small){ margin: 7em auto 0 auto; }
 	@include breakpoint(narrow){ margin: 10em auto 0 auto; }
 	@include breakpoint(gs){ margin: 12em auto 0 auto; }
 	@include breakpoint(normal){ margin: 17em auto 0 auto; }
+	*/
+	@include breakpoint($breakpoint-medium-width)
+		margin: 7em auto 0 auto;
+	@include breakpoint($breakpoint-medium-not-wide)
+		margin: 7em auto 0 auto;
+	@include breakpoint($breakpoint-medium-height)
+		margin: 7em auto 0 auto;
+	@include breakpoint($breakpoint-not-too-wide)
+		margin: 15em auto 0 auto;
+	@include breakpoint($breakpoint-kind-of-wide)
+		margin: 20em auto 0 auto;
 	box-shadow: 0 0 25px 1px #000;
 }
 
@@ -150,6 +107,7 @@ body{
 	padding: 0 1em 0 1em;
 	max-width: 35.22em;
 	p{
+		/*
 		text-align: justify;
 		@include breakpoint(very-small){ font-size: 100%; }
 		@include breakpoint(small){ font-size: 100%; }
@@ -157,6 +115,7 @@ body{
 		@include breakpoint(gs){ font-size: 110%; }
 		@include breakpoint(normal){ font-size: 115%; }
 		@include breakpoint(wide){ font-size: 120%; }
+		*/
 	}
 }
 
