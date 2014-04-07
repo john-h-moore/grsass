@@ -111,11 +111,13 @@ body{
 		@include breakpoint(normal){ font-size: 115%; }
 		@include breakpoint(wide){ font-size: 120%; }
 		*/
-		@include breakpoint($breakpoint-medium-width){ font-size: 100%; }
-		@include breakpoint($breakpoint-medium-not-wide){ font-size: 100%; }
-		@include breakpoint($breakpoint-medium-height){ font-size: 110%; }
-		@include breakpoint($breakpoint-not-too-wide){ font-size: 115%; }
-		@include breakpoint($breakpoint-kind-of-wide){ font-size: 125%; }
+		text-align: justify;
+		line-height: 1.5em;
+		@include breakpoint($breakpoint-medium-width){ font-size: 110%; }
+		@include breakpoint($breakpoint-medium-not-wide){ font-size: 110%; }
+		@include breakpoint($breakpoint-medium-height){ font-size: 115%; }
+		@include breakpoint($breakpoint-not-too-wide){ font-size: 125%; }
+		@include breakpoint($breakpoint-kind-of-wide){ font-size: 135%; }
 	}
 }
 
