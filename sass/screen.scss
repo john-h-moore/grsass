@@ -74,7 +74,7 @@ body{
 		line-height: 1.1em;
 		@include breakpoint($breakpoint-medium-width) { padding-top: 0.25em; }
 		@include breakpoint($breakpoint-medium-not-wide) { padding-top: 0.25em; }
-		@include breakpoint($breakpoint-medium-height) { padding-top: 0.75em; }}
+		@include breakpoint($breakpoint-medium-height) { padding-top: 0.75em; }
 		@include breakpoint($breakpoint-not-too-wide) { padding-top: 2em; }
 		@include breakpoint($breakpoint-kind-of-wide) { padding-top: 2em; }
 	}
