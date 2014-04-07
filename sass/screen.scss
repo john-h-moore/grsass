@@ -125,7 +125,7 @@ body{
 	min-height: 80%;
 	margin: 0 auto;
 	padding: 0 1em 0 1em;
-	width: 30em;
+	max-width: 35.22em;
 	/*
 	@media screen and(max-width: $tablet-portrait){;
 		width: 95%;
@@ -139,14 +139,27 @@ body{
 	}
 	*/
 	@include breakpoint(very-small){
-		width: 95%;
-		padding: 0 0.5em 0 0.5em;
+//		width: 95%;
+		//padding: 0 0.5em 0 0.5em;
 		background: blue;
 	}
 	@include breakpoint(small){
-		width: 95%;
-		padding: 0 0.5em 0 0.5em;
+//		width: 95%;
+		//padding: 0 0.5em 0 0.5em;
 		background: red;
+	}
+	@include breakpoint(narrow){
+//		width: 80%;
+		background: orange;
+	}
+	@include breakpoint(gs){
+		background: green;
+	}
+	@include breakpoint(normal){
+		background: #456;
+	}
+	@include breakpoint(wide){
+		background: #cde;
 	}
 	p{
 		text-align: justify;
