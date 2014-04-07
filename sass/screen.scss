@@ -6,6 +6,7 @@
 @import "compass/reset";
 
 $font-stack: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+$title-fonts: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 /*
 $tablet-portrait: 500px;
 $tablet-landscape: 768px;
@@ -93,7 +94,7 @@ body{
 	top: 2em;
 	z-index: -1;
 	h1{
-		font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+		font-family: $title-fonts;
 		font-size: 50px;
 		//margin-top: 2em;
 		text-align: center;
@@ -111,7 +112,6 @@ body{
 	background: white;
 	margin: 20em auto 0 auto;
 	padding-top: 2em;
-
 	@include breakpoint(very-small){ margin: 7em auto 0 auto; }
 	@include breakpoint(small){ margin: 7em auto 0 auto; }
 	@include breakpoint(narrow){ margin: 10em auto 0 auto; }
@@ -125,26 +125,14 @@ body{
 	margin: 0 auto;
 	padding: 0 1em 0 1em;
 	max-width: 35.22em;
-	@include breakpoint(very-small){
-		background: blue;
-	}
-	@include breakpoint(small){
-		background: red;
-	}
-	@include breakpoint(narrow){
-		background: orange;
-	}
-	@include breakpoint(gs){
-		background: green;
-	}
-	@include breakpoint(normal){
-		background: #456;
-	}
-	@include breakpoint(wide){
-		background: #cde;
-	}
 	p{
 		text-align: justify;
+		@include breakpoint(very-small){ font-size: 100%; }
+		@include breakpoint(small){ font-size: 100%; }
+		@include breakpoint(narrow){ font-size: 105%; }
+		@include breakpoint(gs){ font-size: 110%; }
+		@include breakpoint(normal){ font-size: 115%; }
+		@include breakpoint(wide){ font-size: 120%; }
 	}
 }
 
