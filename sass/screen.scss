@@ -141,10 +141,12 @@ body{
 	@include breakpoint(very-small){
 		width: 95%;
 		padding: 0 0.5em 0 0.5em;
+		background: blue;
 	}
 	@include breakpoint(small){
 		width: 95%;
 		padding: 0 0.5em 0 0.5em;
+		background: red;
 	}
 	p{
 		text-align: justify;
