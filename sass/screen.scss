@@ -26,6 +26,7 @@ $huge: 1824px;
 */
 
 @mixin breakpoint($point){
+	/*
 	@if $point == very-small {
 		@media screen and (max-width: 320px){ @content; }
 	}
@@ -43,6 +44,28 @@ $huge: 1824px;
 	}
 	@else if $point == big {
 		@media screen and (max-width: 1224px) and (min-width: 1025px) { @content; }
+	}
+	@else if $point == wide {
+		@media screen and (max-width: 1600px){ @content; }
+	}
+	*/
+	@if $point == very-small {
+		@media (max-width: 320px){ @content; }
+	}
+	@else if $point == small {
+		@media (max-width: 480px) { @content; }
+	}
+	@else if $point == narrow {
+		@media (max-width: 768px) { @content;}
+	}
+	@else if $point == gs {
+		@media (max-width: 960px) { @content; }
+	}
+	@else if $point == normal {
+		@media (max-width: 1024px) { @content; }
+	}
+	@else if $point == big {
+		@media (max-width: 1224px) { @content; }
 	}
 	@else if $point == wide {
 		@media screen and (max-width: 1600px){ @content; }
