@@ -72,6 +72,7 @@ body{
 		font-style: normal;
 		letter-spacing: -0.04em;
 		line-height: 1.1em;
+		padding-top: 0.25em;
 		@include breakpoint($breakpoint-not-too-wide){ padding-top: 2em; }
 		@include breakpoint($breakpoint-kind-of-wide){ padding-top: 2em; }
 	}
